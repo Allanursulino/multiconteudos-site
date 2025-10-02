@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/ursul/OneDrive/Desktop/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiConteúdos Scripts - Scripts Roblox Premium</title>
+    <meta name="description" content="Encontre os melhores scripts para Roblox no MultiConteúdos Scripts. Tutoriais completos, scripts funcionais e suporte especializado para melhorar sua experiência no Roblox.">
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #ff0000;
+            --secondary: #cc0000;
+            --dark: #000000;
+            --light: #ffffff;
+            --gray: #cccccc;
+            --card-bg: #1a1a1a;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            background: var(--primary);
+            color: var(--dark);
+        }
+        
+        /* Configuração de Imagens */
+        .image-setup {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            text-align: center;
+            border: 1px solid var(--primary);
+        }
+        
+        .image-setup h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .setup-option {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        
+        .url-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .setup-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+        
+        .setup-btn:hover {
+            background: var(--secondary);
+        }
+        
+        .preview-box {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #333;
+            border-radius: 8px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .preview-img {
+            max-width: 150px;
+            max-height: 100px;
+            border-radius: 8px;
+        }
+        
+        /* Conteúdo principal */
+        main {
+            padding: 2rem 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            border: 1px solid var(--primary);
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            color: var(--gray);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+        }
+        
+        /* Seção de scripts */
+        .scripts-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--light);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .scripts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .script-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+        
+        .script-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+        
+        .script-video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .script-content {
+            padding: 1.5rem;
+        }
+        
+        .script-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .script-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .script-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary {
+            background-color: #333;
+            color: var(--light);
+            border: 1px solid #555;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #444;
+        }
+        
+        /* Sobre */
+        .about {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            border: 1px solid #333;
+        }
+        
+        .about h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p, .about-text li {
+            color: var(--gray);
+        }
+        
+        .about-text ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .about-text li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .channel-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            border: 2px solid var(--primary);
+        }
+        
+        /* Páginas de Termos e Política */
+        .legal-page {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            border: 1px solid #333;
+        }
+        
+        .legal-page h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .legal-page h2 {
+            margin: 1.5rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        .legal-page h3 {
+            margin: 1.2rem 0 0.8rem;
+            color: var(--light);
+        }
+        
+        .legal-page p, .legal-page ul {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+        
+        .legal-page ul {
+            margin-left: 1.5rem;
+        }
+        
+        .legal-page li {
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 2px solid var(--primary);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .script-actions {
+                flex-direction: column;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img id="headerLogo" class="logo-img" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/logo.jpg" alt="Logo MultiConteúdos Scripts">
+                    <h1>MultiConteúdos Scripts</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#inicio" class="active">Início</a></li>
+                        <li><a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#scripts">Scripts</a></li>
+                        <li><a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#sobre">Sobre</a></li>
+                        <li><a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#termos">Termos</a></li>
+                        <li><a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#privacidade">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Seção de Configuração de Imagens -->
+        <section id="image-setup" class="image-setup hidden">
+            <h2>🔧 Configure suas Imagens</h2>
+            <p>Adicione os links das suas imagens abaixo</p>
+            
+            <!-- Configuração da Logo -->
+            <div class="setup-option">
+                <h3>📷 Logo do Canal</h3>
+                <p>Cole o link da sua logo:</p>
+                <input type="text" id="logoUrl" class="url-input" placeholder="https://exemplo.com/sua-logo.jpg" value="https://i.ibb.co/P24KYwjd/logo.jpg">
+                <div class="preview-box">
+                    <img id="logoPreview" class="preview-img" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/logo.jpg" alt="Preview da Logo" style="display: block;">
+                    <span id="logoPlaceholder" style="display: none;">Prévia da logo aparecerá aqui</span>
+                </div>
+                <button class="setup-btn" onclick="applyLogo()">Aplicar Logo</button>
+            </div>
+            
+            <!-- Configuração da Imagem do Canal -->
+            <div class="setup-option">
+                <h3>📺 Imagem do Canal</h3>
+                <p>Cole o link da imagem do seu canal:</p>
+                <input type="text" id="channelUrl" class="url-input" placeholder="https://exemplo.com/canal-image.jpg" value="https://i.ibb.co/7mrQ9zz/canal.jpg">
+                <div class="preview-box">
+                    <img id="channelPreview" class="preview-img" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/canal.jpg" alt="Preview do Canal" style="display: block;">
+                    <span id="channelPlaceholder" style="display: none;">Prévia da imagem do canal aparecerá aqui</span>
+                </div>
+                <button class="setup-btn" onclick="applyChannelImage()">Aplicar Imagem</button>
+            </div>
+            
+            <button class="setup-btn" onclick="finishSetup()" style="background: #00cc00; margin-top: 1rem;">✅ Finalizar Configuração</button>
+            
+            <div style="margin-top: 1rem; padding: 1rem; background: #222; border-radius: 5px;">
+                <h4>💡 Como conseguir links de imagem:</h4>
+                <p style="font-size: 0.9rem; color: #ccc;">
+                    1. Faça upload no <a href="https://imgbb.com/" target="_blank" style="color: var(--primary);">ImgBB</a> (grátis)<br>
+                    2. Copie o link direto da imagem<br>
+                    3. Cole no campo acima
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção Hero -->
+        <section id="inicio" class="hero">
+            <h2>Scripts Roblox Premium</h2>
+            <p>Encontre os melhores scripts para Roblox com tutoriais completos no MultiConteúdos Scripts. Aprenda a usar e implementar scripts funcionais para melhorar sua experiência no Roblox.</p>
+            <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#scripts" class="cta-button">Explorar Scripts</a>
+        </section>
+
+        <!-- Seção de Scripts -->
+        <section id="scripts" class="scripts-section">
+            <h2 class="section-title">Nossos Scripts em Destaque</h2>
+            <div class="scripts-grid">
+                <!-- Script 1 -->
+                <div class="script-card">
+                    <iframe class="script-video" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/_Rt_fo_t3kM.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="script-content">
+                        <h3>Fisch Script</h3>
+                        <p>Script completo para Fisch, Sem ban e SEM CHAVE!!.</p>
+                        <div class="script-actions">
+                            <a href="https://loot-link.com/s?jkEnG6ze" class="btn btn-primary" target="_blank">Baixar Script</a>
+                            <a href="https://www.youtube.com/watch?v=_Rt_fo_t3kM" class="btn btn-secondary" target="_blank">Ver Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Script 2 -->
+                <div class="script-card">
+                    <iframe class="script-video" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/Y4yGFG7vH6E.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="script-content">
+                        <h3>Anime Eternal Script</h3>
+                        <p>Script com Kill Aura, Rank Up e Auto Roll E SEM CHAVE!!.</p>
+                        <div class="script-actions">
+                            <a href="https://loot-link.com/s?1DtyxatJ" class="btn btn-primary" target="_blank">Baixar Script</a>
+                            <a href="https://www.youtube.com/watch?v=Y4yGFG7vH6E" class="btn btn-secondary" target="_blank">Ver Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Script 3 -->
+                <div class="script-card">
+                    <iframe class="script-video" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/o0iJrMOBUpM.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="script-content">
+                        <h3>Plants Vs Brainrots ToraIsME</h3>
+                        <p>Script com Fast Attack, Collect Cash e Auto Sell e SEM CHAVE!!.</p>
+                        <div class="script-actions">
+                            <a href="https://lootdest.org/s?tJrSrCLl" class="btn btn-primary" target="_blank">Baixar Script</a>
+                            <a href="https://www.youtube.com/watch?v=o0iJrMOBUpM" class="btn btn-secondary" target="_blank">Ver Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+<div class="script-card">
+    <iframe class="script-video" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/kY26rI2Jogs.html"></iframe>
+    <div class="script-content">
+        <h3>Build a Zoo Script</h3>
+        <p>Script com Auto Collect e Auto Hatch e SEM CHAVE!!</p>
+        <div class="script-actions">
+            <a href="https://lootdest.org/s?vnhcBB7J" class="btn btn-primary">Baixar Script</a>
+            <a href="https://www.youtube.com/watch?v=kY26rI2Jogs" class="btn btn-secondary">Ver Tutorial</a>
+        </div>
+    </div>
+</div>
+<div class="script-card">
+    <iframe class="script-video" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/QS0seNXvjvQ.html"></iframe>
+    <div class="script-content">
+        <h3>Build Ur Base</h3>
+        <p>Script com Auto Farm, Open Crate e SEM CHAVE!!</p>
+        <div class="script-actions">
+            <a href="https://lootdest.org/s?DlfgqEEz" class="btn btn-primary">Baixar Script</a>
+            <a href="https://www.youtube.com/watch?v=QS0seNXvjvQ" class="btn btn-secondary">Ver Tutorial</a>
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="about">
+            <h2>Sobre o MultiConteúdos Scripts</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Bem-vindo ao <strong style="color: var(--primary);">MultiConteúdos Scripts</strong>, sua fonte confiável para scripts de qualidade para Roblox! Nosso foco é criar conteúdo de alto valor para a comunidade do Roblox, oferecendo scripts funcionais e tutoriais detalhados.</p>
+                    <p>No nosso canal do YouTube e através deste site, você encontrará:</p>
+                    <ul>
+                        <li>Tutoriais passo a passo para instalação e uso de scripts</li>
+                        <li>Scripts originais e exclusivos desenvolvidos pela nossa equipe</li>
+                        <li>Reviews de scripts e exploits disponíveis no mercado</li>
+                        <li>Dicas e truques para melhorar sua experiência no Roblox</li>
+                        <li>Suporte à comunidade para dúvidas e problemas</li>
+                    </ul>
+                    <p>Nossa missão é fornecer conteúdo de qualidade que respeita os Termos de Uso da Roblox e promove uma experiência positiva para todos os jogadores.</p>
+                    <a href="https://www.youtube.com/@Multiconteudos" class="cta-button" target="_blank">Visitar Canal no YouTube</a>
+                </div>
+                <div class="about-image">
+                    <img id="channelImage" class="channel-image" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/canal.jpg" alt="Canal MultiConteúdos Scripts">
+                </div>
+            </div>
+        </section>
+
+        <!-- Páginas de Termos e Política -->
+        <section id="termos" class="legal-page hidden">
+            <h1>Termos de Uso</h1>
+            <p>Última atualização: 01 de Janeiro de 2023</p>
+            
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar e usar o site MultiConteúdos Scripts, você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não poderá acessar nosso site.</p>
+            
+            <!-- Restante do conteúdo dos termos -->
+            <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#inicio" class="cta-button">Voltar ao Início</a>
+        </section>
+
+        <section id="privacidade" class="legal-page hidden">
+            <h1>Política de Privacidade</h1>
+            <p>Última atualização: 01 de Janeiro de 2023</p>
+            
+            <h2>1. Coleta de Informações</h2>
+            <p>O MultiConteúdos Scripts coleta informações limitadas para melhorar a experiência do usuário:</p>
+            <ul>
+                <li><strong>Informações de uso:</strong> Coletamos dados anônimos sobre como você interage com nosso site</li>
+                <li><strong>Cookies:</strong> Utilizamos cookies para personalizar conteúdo e anúncios</li>
+                <li><strong>Dados de analytics:</strong> Usamos ferramentas como Google Analytics para entender o tráfego do site</li>
+            </ul>
+            
+            <!-- Restante do conteúdo da política -->
+            <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#inicio" class="cta-button">Voltar ao Início</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <img id="footerLogo" class="logo-img" src="./MultiConteúdos Scripts - Scripts Roblox Premium_files/logo.jpg" alt="Logo MultiConteúdos Scripts">
+                    <h3>MultiConteúdos Scripts</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#inicio">Início</a>
+                    <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#scripts">Scripts</a>
+                    <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#sobre">Sobre</a>
+                    <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#termos">Termos de Uso</a>
+                    <a href="file:///C:/Users/ursul/OneDrive/Desktop/index.html#privacidade">Política de Privacidade</a>
+                    <a href="https://www.youtube.com/@Multiconteudos" target="_blank">YouTube</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 MultiConteúdos Scripts. Todos os direitos reservados.</p>
+                <p>Este site não é afiliado à Roblox Corporation. Roblox é uma marca registrada da Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funções para configurar imagens
+        function applyLogo() {
+            const logoUrl = document.getElementById('logoUrl').value.trim();
+            if (logoUrl) {
+                document.getElementById('logoPreview').src = logoUrl;
+                document.getElementById('logoPreview').style.display = 'block';
+                document.getElementById('logoPlaceholder').style.display = 'none';
+                
+                // Aplicar no site
+                document.getElementById('headerLogo').src = logoUrl;
+                document.getElementById('footerLogo').src = logoUrl;
+                
+                alert('Logo aplicada com sucesso!');
+            } else {
+                alert('Por favor, cole um link de imagem válido');
+            }
+        }
+        
+        function applyChannelImage() {
+            const channelUrl = document.getElementById('channelUrl').value.trim();
+            if (channelUrl) {
+                document.getElementById('channelPreview').src = channelUrl;
+                document.getElementById('channelPreview').style.display = 'block';
+                document.getElementById('channelPlaceholder').style.display = 'none';
+                
+                // Aplicar no site
+                document.getElementById('channelImage').src = channelUrl;
+                
+                alert('Imagem do canal aplicada com sucesso!');
+            } else {
+                alert('Por favor, cole um link de imagem válido');
+            }
+        }
+        
+        function finishSetup() {
+            document.getElementById('image-setup').classList.add('hidden');
+            document.querySelectorAll('#inicio, #scripts, #sobre').forEach(section => {
+                section.classList.remove('hidden');
+            });
+            alert('Configuração concluída! Seu site está pronto.');
+        }
+        
+        // Sistema de navegação
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a, .footer-links a');
+            const sections = document.querySelectorAll('section');
+            
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id !== 'image-setup') {
+                        section.classList.add('hidden');
+                    }
+                });
+                
+                const targetSection = document.querySelector(sectionId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    
+                    if (targetId.startsWith('#')) {
+                        showSection(targetId);
+                        
+                        if (targetId !== '#termos' && targetId !== '#privacidade') {
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop - 80,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        } else {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else if (this.target === '_blank') {
+                        window.open(this.href, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body></html>
